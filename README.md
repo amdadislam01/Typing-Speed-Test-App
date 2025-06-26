@@ -21,15 +21,4 @@ An interactive web application that measures and improves your typing speed and 
 
 ## 🎮 Demo Preview
 
-https://github.com/amdadislam01/Typing-Speed-Test-App/assets/12345678/demo.mp4  
-*(Replace with your actual demo video or GIF)*
-
-## 🚀 Quick Start
-
-```bash
-# Clone repository
-git clone https://github.com/amdadislam01/Typing-Speed-Test-App.git
-
-# Open in browser
-cd Typing-Speed-Test-App
-open index.html
+ <img src="https://postimg.cc/tY9QRQ5W" alt="img" width="300"/>
