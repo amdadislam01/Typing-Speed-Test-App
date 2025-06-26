@@ -1,0 +1,266 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-image: url('https://images.unsplash.com/photo-1636052649769-704d9a0887f0?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.typing-test-container {
+    width: 80%;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+#cl{
+    color: rgb(35, 100, 86);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+}
+
+.stats div {
+    background-color: #f0f0f0;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.progress-container {
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    transition: width 0.5s ease, background-color 0.3s ease;
+}
+
+.text-display {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    min-height: 150px;
+    max-height: 200px; /* Add maximum height */
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    overflow-y: auto; /* Add scroll for overflow */
+    word-wrap: break-word; /* Ensure long words break */
+    white-space: pre-wrap; /* Preserve spaces and line breaks */
+}
+.text-display span {
+    display: inline; /* Ensure spans stay inline */
+    position: relative; /* For proper positioning */
+}
+
+#user-input {
+    width: 96%;
+    height: 150px;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+    transition: border-color 0.3s ease;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#user-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.result-container {
+    text-align: center;
+    padding: 20px;
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.result-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.final-wpm, .final-accuracy {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px 25px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+#restart-btn {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#restart-btn:hover {
+    background-color: #0b7dda;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.correct {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.incorrect {
+    color: #F44336;
+    text-decoration: underline;
+}
+
+.current {
+    background-color: #FFEB3B;
+    border-radius: 2px;
+    animation: blink 1s infinite;
+    padding: 0 2px; /* Add some padding */
+    margin: 0 -2px; /* Compensate for padding */
+}
+
+.app-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.developer-name {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.app-footer a {
+    color: #2196F3;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.app-footer a:hover {
+    color: #0b7dda;
+    text-decoration: underline;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+    
+    .app-footer {
+        font-size: 0.8rem;
+    }
+}
+/* Add to your CSS */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    color: #4CAF50;
+    transform: translateY(-3px);
+}
+
+.api-credit {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 5px 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+@keyframes blink {
+    0%, 100% { background-color: #FFEB3B; }
+    50% { background-color: #FFF9C4; }
+}
+

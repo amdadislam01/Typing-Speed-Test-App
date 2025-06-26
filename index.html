@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="typing-test-container">
+        <div class="header">
+            <h1 id="cl">Typing Speed Test</h1>
+            <div class="stats">
+                <div class="timer">
+                    <span>Time:</span>
+                    <span id="time">60</span>s
+                </div>
+                <div class="wpm">
+                    <span>WPM:</span>
+                    <span id="wpm">0</span>
+                </div>
+                <div class="accuracy">
+                    <span>Accuracy:</span>
+                    <span id="accuracy">100</span>%
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <div class="text-display" id="text-display"></div>
+
+        <textarea id="user-input" placeholder="Start typing here..." autofocus></textarea>
+
+        <div class="result-container" id="result-container">
+            <h2>Test Complete!</h2>
+            <div class="result-stats">
+                <div class="final-wpm">
+                    <span>Final WPM:</span>
+                    <span id="final-wpm">0</span>
+                </div>
+                <div class="final-accuracy">
+                    <span>Accuracy:</span>
+                    <span id="final-accuracy">0</span>%
+                </div>
+            </div>
+            <button id="restart-btn">Try Again</button>
+        </div>
+    </div>
+
+    <footer class="app-footer">
+        <div class="footer-content">
+            <div class="copyright">
+                &copy; <span id="current-year"></span> Typing Speed Test App
+            </div>
+            <div class="credits">
+                Developed by <span class="developer-name">MD Amdad Islam</span>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/amdadislam01" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/amdad_vai__01" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
