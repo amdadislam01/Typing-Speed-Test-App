@@ -21,4 +21,4 @@ An interactive web application that measures and improves your typing speed and 
 
 ## 🎮 Demo Preview
 
- <img src="https://ik.imagekit.io/yqnbhdlo4/Img/typing?updatedAt=1754893491375" alt="img" width="400"/>
+ <img src="https://ik.imagekit.io/yqnbhdlo4/Img/typing?updatedAt=1754893491375" alt="img" width="500"/>
