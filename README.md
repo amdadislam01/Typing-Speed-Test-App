@@ -34,7 +34,6 @@ A sophisticated web application designed to measure and enhance typing proficien
 <p align="center">
   <img src="https://skillicons.dev/icons?i=html,css,js,github" alt="Technology Stack" width="350"/>
   <br>
-  <em>Vanilla JavaScript implementation for optimal performance</em>
 </p>
 
 ## 🖥 Application Interface
