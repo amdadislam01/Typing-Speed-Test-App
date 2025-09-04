@@ -1,4 +1,4 @@
-# ⌨️ Typing Speed Analyze
+# ⌨️ Typing Speed Analyzer
 
 A sophisticated web application designed to measure and enhance typing proficiency through comprehensive metrics and adaptive challenges.
 
